@@ -4,13 +4,13 @@
 Qn1. What are different ways to add images into our App?
 
 - 1.Through CDN links.
-- <img src={CDN_LINK} alt="image"/>
+- Image <img src={CDN_LINK} alt="image"/>
 
 - 2. By using local images & importing it.
 - import logo from './logo.png'; 
-- function Header() {
-- return <img src={logo} alt="Logo" />;
-- }
+
+- image:<img src={logo} alt="Logo" />;
+
 
 Qn2. WHat Would happen if we console.log(useState())?
 

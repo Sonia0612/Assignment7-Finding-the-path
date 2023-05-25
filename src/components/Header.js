@@ -1,8 +1,10 @@
 import { useState } from "react";
 import * as constant  from "../utils/constant";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Login from "../pages/Login";
 
 const Header=()=>{
+    let nav=useNavigate();
     const [isLogged,setIsLogged]=useState(false);
     return(
         <div className="header">
@@ -19,7 +21,8 @@ const Header=()=>{
                     {/* <li>cart</li> */}
                 </ul>
             </div>
-            {isLogged?<button className="log" onClick={()=>setIsLogged(false)}>Logout</button>:<button className="log" onClick={()=>setIsLogged(true)}>Login</button>}
+            {isLogged?<button className="log">Logout</button>:
+            <button className="log" onClick={()=>nav('/login')}>Login</button>}
         </div>
     )
 }

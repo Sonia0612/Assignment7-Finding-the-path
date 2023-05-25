@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import MenuPage from "./pages/MenuPage";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:"/login",
+    element:<Login/>,
+    errorElement:<Error/>
+}
 ]);
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
